@@ -1,0 +1,10 @@
+ext {
+    app_namespace = "com.onix.foundation"
+    app_applicationId = "com.onix.foundation"
+    app_compileSdk = 33
+    app_minSdk = 24
+    app_targetSdk = 33
+    app_versionCode = 1
+    app_versionName = "1.0"
+    app_jvmTarget = '1.8'
+}

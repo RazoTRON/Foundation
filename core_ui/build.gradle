@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+apply from: "$rootDir/dependencies.gradle"
+apply from: "$rootDir/android_config.gradle"
+apply from: "$rootDir/android_ui_config.gradle"
+
+android {
+    namespace "${app_namespace}.core_ui"
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation core_ktx
+
+    api compose
+    api platform(compose_bom)
+    api compose_ui
+    api compose_graphics
+    api compose_preview
+    api material3
+    api dagger_hilt_compose
+
+    debugImplementation compose_tooling_debug
+
+    api compose_viewmodel
+    api compose_lifecycle
+    api navigation
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

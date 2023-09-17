@@ -1,0 +1,15 @@
+apply from: "$rootDir/app_config.gradle"
+
+android {
+    defaultConfig {
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.3.2'
+    }
+}

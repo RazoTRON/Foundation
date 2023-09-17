@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+apply from: "$rootDir/app_config.gradle"
+apply from: "$rootDir/android_config.gradle"
+apply from: "$rootDir/android_ui_config.gradle"
+apply from: "$rootDir/dependencies.gradle"
+
+android {
+    namespace app_namespace
+
+    defaultConfig {
+        applicationId app_applicationId
+        versionCode app_versionCode
+        versionName app_versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(":core_ui")
+    implementation project(":domain")
+    implementation project(":data")
+    implementation project(":feature:home")
+    implementation project(":feature:home_api")
+    implementation project(":feature:details")
+    implementation project(":feature:details_api")
+
+    implementation core_ktx
+    implementation kotlin_bom
+    implementation lifecycle_ktx
+    implementation coroutines_core
+
+    implementation dagger_hilt
+    kapt dagger_hilt_kapt
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation platform('androidx.compose:compose-bom:2023.03.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}

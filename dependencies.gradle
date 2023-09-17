@@ -1,0 +1,88 @@
+ext {
+    core_ktx = 'androidx.core:core-ktx:1.10.1'
+    kotlin_bom = 'org.jetbrains.kotlin:kotlin-bom:1.8.0'
+    lifecycle_ktx = 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    coroutines_core = 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
+
+    // Compose
+    compose = 'androidx.activity:activity-compose:1.7.2'
+    compose_bom = 'androidx.compose:compose-bom:2023.05.01'
+    compose_ui = 'androidx.compose.ui:ui'
+    compose_graphics = 'androidx.compose.ui:ui-graphics'
+    compose_preview = 'androidx.compose.ui:ui-tooling-preview'
+    material3 = 'androidx.compose.material3:material3'
+    def lifecycle_version = "2.6.1"
+    compose_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    compose_lifecycle = "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version"
+
+    compose_tooling_debug = 'androidx.compose.ui:ui-tooling'
+    compose_test_manifest_debug = 'androidx.compose.ui:ui-test-manifest'
+    compose_constraintlayout = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    navigation = "androidx.navigation:navigation-compose:2.6.0"
+
+    splash_screen = "androidx.core:core-splashscreen:1.0.1"
+
+    // Coil Images
+    coil = 'io.coil-kt:coil-compose:2.4.0'
+
+    // Koin
+    def koin_version = "3.4.0"
+    koin_core = "io.insert-koin:koin-core:$koin_version"
+    koin_android = "io.insert-koin:koin-android:$koin_version"
+    koin_android_compat = "io.insert-koin:koin-android-compat:$koin_version"
+    koin_compose =  "io.insert-koin:koin-androidx-compose:$koin_version"
+
+    // Retrofit
+    retrofit = 'com.squareup.retrofit2:retrofit:2.9.0'
+    converter_gson =  "com.squareup.retrofit2:converter-gson:2.9.0"
+    gson = "com.google.code.gson:gson:2.10.1"
+    logging_interceptor = 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    // Encrypted SharedPreferences
+    encrypted_shared_preferences = "androidx.security:security-crypto:1.1.0-alpha06"
+
+    // DataStore
+    datastore = "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Google maps
+    maps_services = 'com.google.android.gms:play-services-maps:18.1.0'
+    location = 'com.google.android.gms:play-services-location:21.0.1'
+    android_maps_utils = 'com.google.maps.android:android-maps-utils:1.1.0'
+
+    // Google Maps Compose
+    compose_maps = "com.google.maps.android:maps-compose:2.11.4"
+
+    // Dagger
+    def dagger_version = "2.46.1"
+    dagger = "com.google.dagger:dagger:$dagger_version"
+    dagger_compiler = "com.google.dagger:dagger-compiler:$dagger_version"
+    java_inject_annotations = "javax.inject:javax.inject:1"
+
+    // Dagger Hilt
+    dagger_hilt = "com.google.dagger:hilt-android:2.44"
+    dagger_hilt_kapt = "com.google.dagger:hilt-compiler:2.44"
+    dagger_hilt_compose = "androidx.hilt:hilt-navigation-compose:1.0.0"
+
+    // Jsoup HTML parser
+    jsoup = 'org.jsoup:jsoup:1.16.1'
+
+    //Room
+    def room_version = "2.5.2"
+    room = "androidx.room:room-runtime:$room_version"
+    room_ktx = "androidx.room:room-ktx:$room_version"
+    room_annotation_processor = "androidx.room:room-compiler:$room_version"
+    room_kapt = "androidx.room:room-compiler:$room_version"
+
+    // Paging
+    def paging_version = "3.2.1"
+    paging = "androidx.paging:paging-runtime:$paging_version"
+    paging_compose = "androidx.paging:paging-compose:$paging_version"
+
+    // Logger
+    logger_slf4j = "org.slf4j:slf4j-simple:2.0.7"
+
+    // Testing
+    junit_testImplementation = 'junit:junit:4.13.2'
+    android_junit_TestImplementation = 'androidx.test.ext:junit:1.1.5'
+    android_espresso_core_TestImplementation = 'androidx.test.espresso:espresso-core:3.5.1'
+}
