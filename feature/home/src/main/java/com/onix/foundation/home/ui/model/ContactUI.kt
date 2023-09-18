@@ -1,4 +1,4 @@
-package com.onix.foundation.home.ui
+package com.onix.foundation.home.ui.model
 
 import com.onix.foundation.domain.model.Contact
 

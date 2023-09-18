@@ -23,6 +23,7 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemKey
 import coil.compose.AsyncImage
+import com.onix.foundation.home.ui.model.ContactUI
 import com.onix.foundation.home.ui.util.LocalDimen
 
 @Composable
