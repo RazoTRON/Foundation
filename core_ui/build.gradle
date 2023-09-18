@@ -26,17 +26,11 @@ dependencies {
     api compose_graphics
     api compose_preview
     api material3
-    api dagger_hilt_compose
 
     debugImplementation compose_tooling_debug
 
     api compose_viewmodel
     api compose_lifecycle
     api navigation
-
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    api dagger_hilt_compose
 }
