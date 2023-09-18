@@ -22,9 +22,9 @@ internal class HomeViewModel @Inject constructor(
     private val getContactsUseCase: GetContactsUseCase,
 ) : ViewModel() {
 
-    val contacts: StateFlow<PagingData<ContactUI>> = getContacts()
+    val contacts: StateFlow<PagingData<ContactUI>> = getContactsFlow()
 
-    private fun getContacts(): StateFlow<PagingData<ContactUI>> {
+    private fun getContactsFlow(): StateFlow<PagingData<ContactUI>> {
         val flow = getContactsUseCase.execute(CONTACTS_PER_PAGE)
 
         return flow.map { pagingData ->

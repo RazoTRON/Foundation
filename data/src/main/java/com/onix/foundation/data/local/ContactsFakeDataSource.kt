@@ -54,7 +54,7 @@ internal class ContactsFakeDataSource : ContactsLocalDataSource {
         delay(1000)
 
         val itemsPerPage = 10
-        val loadedCount = page * itemsPerPage
+        val loadedCount = (page - 1) * itemsPerPage
 
         return list.subList(0 + loadedCount, itemsPerPage + loadedCount)
     }
